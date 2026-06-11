@@ -1,0 +1,58 @@
+name: Drowsy Downpour [Buffed]
+properties:
+  title_stroke_color:
+    - 66
+    - 90
+    - 170
+    - 255
+  background_color:
+    - 31
+    - 2
+    - 144
+    - 85
+  friction: 0.75
+areas:
+  - properties:
+      maximum_speed: 300
+      minimum_speed: 300
+    x: 0
+    y: 0
+    zones:
+      - type: safe
+        properties:
+          minimum_speed: 300
+        x: 0
+        y: 0
+        width: 320
+        height: 480
+      - type: active
+        x: last_right
+        y: 0
+        width: 2560
+        height: 480
+        spawner:
+          - radius: 1
+            speed: 300
+            count: 68
+            types:
+              - dripping
+          - radius: 1
+            speed: 225
+            count: 68
+            types:
+              - dripping
+          - radius: 1
+            speed: 345
+            count: 68
+            types:
+              - dripping
+          - radius: 7
+            speed: 120
+            count: 10
+            types:
+              - normal
+      - type: safe
+        x: last_right
+        y: 0
+        width: 352
+        height: last_height
